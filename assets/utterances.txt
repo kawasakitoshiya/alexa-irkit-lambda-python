@@ -1,0 +1,3 @@
+ControlHomeIntent turn {Target} {Control}
+ControlHomeIntent turn {Device} {Target} {Control}
+ControlHomeIntent turn {Target} {Control} at {Device}

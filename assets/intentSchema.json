@@ -1,0 +1,30 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+     "intent": "ControlHomeIntent",
+      "slots": [
+        {
+          "name": "Control",
+          "type": "LIST_OF_CONTROLS"
+        },
+        {
+          "name": "Device",
+          "type": "LIST_OF_DEVICES"
+        },
+        {
+          "name": "Target",
+          "type": "LIST_OF_TARGETS"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+service: alexa-irkit-lambda-python
+frameworkVersion: "=1.15.3"
+
+provider:
+  name: aws
+  runtime: python3.6
+  profile: ${opt:profile, self:custom.defaultProfile}
+  region: ${opt:region, self:custom.defaultRegion}
+  environment:
+    APPLICATION_ID: ${env:APPLICATION_ID}
+custom:
+  defaultProfile: default
+  defaultRegion: us-east-1
+plugins:
+    - serverless-python-requirements
+package:
+  exclude:
+    - assets/**
+    - sample/**
+functions:
+  main:
+    handler: handler.handler
+    events:
+      - alexaSkill
